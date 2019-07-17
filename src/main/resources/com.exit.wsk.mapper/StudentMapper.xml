@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.exit.wsk.mapper.StudentMapper">
+    <select id="getMapStudentList" resultType="java.util.Map" parameterType="map">
+        select * from t_student s left JOIN t_class c on s.cid = c.cid
+        <!--<where>-->
+        <!--<if test="mohu != null and mohu != ''">-->
+        <!--s.name like concat('%',#{mohu},'%')-->
+        <!--</if>-->
+        <!--</where>-->
+        -- //limit #{index},#{pageSize}
+    </select>
+
+    <!--<select id="getCountList" resultType="int" parameterType="map">-->
+    <!--select count(*) from t_student-->
+    <!--&lt;!&ndash;<where>&ndash;&gt;-->
+    <!--&lt;!&ndash;<if test="mohu != null and mohu != ''">&ndash;&gt;-->
+    <!--&lt;!&ndash;name like concat('%',#{mohu},'%')&ndash;&gt;-->
+    <!--&lt;!&ndash;</if>&ndash;&gt;-->
+    <!--&lt;!&ndash;</where>&ndash;&gt;-->
+    <!--</select>-->
+
+</mapper>
